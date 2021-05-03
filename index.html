@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="snake.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="menu" class="show">
+            <form action="">
+                <h1>Sssnake!</h1>
+                <section id="player-settings">
+                    <label for="snake-type">Type</label>
+                    <select id="snake-type" required>
+                        <option value="s">Sss'ish</option>
+                        <option value="h">Hss'ish</option>
+                        <option value="t">Tss'ish</option>
+                        <option value="k">Kss'ish</option>
+                    </select>
+                    <label for="snake-name">Name</label>
+                    <input type="text" id="snake-name" required>
+                    <label for="snake-color">Snake Color</label>
+                    <input type="color" id="snake-color">
+                </section>
+                <section id="game-settings">
+                    <label for="block-size-container">Block Size</label>
+                    <span id="block-size-container">
+                        <input type="range" id="block-size" value="25" min="10" max="40"> 
+                        <span id="block-size-preview"></span>
+                    </span>
+                    <div style="grid-column: span 2">
+                        <input type="checkbox" id="debug-mode-on">
+                        <label for="debug-mode-on">Debug Mode <span></span></label>
+                    </div>
+                </section>
+                <button id="btn-start"><h1>Ssstart!</h1></button>
+            </form>
+        </div>
+        <div id="game-info">
+            <div id="name-container">
+                <div>Name:</div>
+                <div id="name"></div>
+                <div>Type:</div>
+                <div id="type"></div>
+            </div>
+            <div id="stats-container">
+                <div>Score: </div>
+                <div id="score"></div>
+                <div>Speed: </div>
+                <div id="speed"></div>
+                <div>Size: </div>
+                <div id="size"></div>
+            </div>
+        </div>
+        <div id="gameboard"></div>
+        <div id="game-over">GAME OVER</div>
+        <div id="paused">PAUSED</div>
+    </div>
+</body>
+</html>
